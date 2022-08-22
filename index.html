@@ -8,10 +8,10 @@
   <script src="tooling/smpte.js"></script>
   <link rel="stylesheet" href="tooling/smpte.css" />
   <meta itemprop="pubType" content="AG" />
-  <meta itemprop="pubNumber" content="25" />
+  <meta itemprop="pubNumber" content="08" />
   <meta itemprop="pubState" content="published" />
-  <meta itemprop="pubDateTime" content="2022-07-05" />
-  <title>Use of JSON in Engineering Documents</title>
+  <meta itemprop="pubDateTime" content="2014-12-22" />
+  <title>Patent Statement</title>
 </head>
 
 <body>
@@ -20,314 +20,266 @@
 
   <section id="sec-toc" class="unnumbered"></section>
 
-  <section id="sec-scope">
-    <h2>Scope</h2>
-    <p>This Administrative Guideline specifies selected uses of the JavaScript Object Notation (JSON) in SMPTE
-      Engineering Documents.</p>
+  <section id="sec-purpose">
+    <h2>Purpose</h2>
+    <p>This Administrative Guideline sets forth the Patent Statement that must be completed to accompany submission of a draft Engineering document, or in response to a Patent inquiry concerning a proposed SMPTE Engineering Document. </p>
   </section>
 
   <section id="sec-conformance"></section>
 
   <section id="sec-normative-references">
     <ul>
-      <li><cite id="bib-ietf-rfc-3986">IETF RFC 3986</cite>, Uniform Resource
-      Identifiers (URI): Generic Syntax, T. Berners-Lee, et al., January 2005. <a>http://www.ietf.org/rfc/rfc3986.txt</a></li>
-      <li><cite id="bib-ietf-rfc-5234">IETF RFC 5234</cite>, “Augmented BNF for
-      Syntax Specifications: ABNF”, D. Crocker, January 2008. <a>https://www.rfc-editor.org/rfc/rfc5234.txt</a></li>
-      <li><cite id="bib-ietf-rfc-7405">IETF RFC 7405</cite>, “Case-Sensitive
-      String Support in ABNF”, P. Kyzivat, December 2014. <a>https://datatracker.ietf.org/doc/html/rfc7405.txt</a></li>
-      <li><cite id="bib-ietf-rfc-8259">IETF RFC 8259</cite>, The JavaScript
-      Object Notation (JSON) Data Interchange Format, T. Bray, <a>http://www.ietf.org/rfc/rfc8259.txt</a></li>
+      <li><cite id="bib-smpte-standards-operation-manual-v31">SMPTE Standards Operation Manual v3.1</cite>
+      <a>https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE%20Standards%20OM%20v3.1.pdf</a></li>
     </ul>
   </section>
 
-  <section id="sec-smpte-json-structures">
-    <h2>SMPTE JSON structures</h2>
-    <section id="sec-overview">
-      <h3>Overview (informative)</h3> 
-      The JSON Schema resource applicable to a JSON structure can specify constraints to which the structure is expected to conform.
-    </section>
-    
-    <section id="sec-json-structures">
-      <h3>JSON Structures</h3>
-      
-      <p>
-        A <dfn>SMPTE JSON structure</dfn> is any data structure that (a) is specified by an
-        Engineering Document and (b) conforms to <a
-        href="#bib-ietf-rfc-8259"></a> (i.e., a JSON document), whether within
-        the prose or as an Additional Element.
-      </p>
-      
-      <p>
-        The structure of each <a>SMPTE JSON structure</a> shall be normatively specified
-        the Engineering Document.
-      </p>
-      <p>
-        Each SMPTE JSON structure should be informatively specified by a JSON Schema
-        resource, which may be a SMPTE JSON Schema resource (see section 5), using
-        the JSON Schema language as specified in <a href="#bib-draft-bhutton-json-schema-00"></a>.
-      </p>
-    </section>
-    
-  </section>
-
-<section id="sec-smpte-json-schema-resources">
-  <h2>SMPTE JSON Schema resources</h2>
-  
-  <section id="sec-introduction">
-    <h3>Introduction (informative)</h3>
-    
-    <p>Using the formal language of JSON Schema, descriptions of conformance
-    requirements for JSON structures can avoid some of the ambiguity inherent with
-    using English prose alone, while allowing the use of existing commercial tools
-    to facilitate testing and validation. It can also represent a significant
-    convenience to implementers, for example by supporting the ability to
-    automatically validate structures.</p>
-    
-    <p>A JSON Schema resource is identified by its canonical URI. Canonical URIs
-    provide an unambiguous and human-readable link to the specifications define
-    these schemas.</p>
+  <section id="sec-intellectual-property-policy">
+    <h2>Intellectual Property Policy</h2>
+    <p>In accordance with the provisions of Section 9.1 of the <a href="#bib-smpte-standards-operation-manual-v31"></a>, a completed SMPTE Patent Statement is required when a draft new Engineering Document is submitted to SMPTE on behalf of a company or other outside organization. Additionally, following the notice of possible Essential Claims, the Director of Engineering shall perform a Patent Inquiry, requesting the reported owner of the intellectual property in question to complete a SMPTE Patent Statement if the owner considers that it does own or control patents or pending applications likely to include Essential Claims for implementation or use of the Engineering Document. </p>
+    <p>Patent statements shall be submitted on the form in <a href="#sec-patent-statement-declaration-with-respect-to-smpte-engineering-documents"></a></p>
+    <p>For the convenience of the person completing this Patent Statement, Section 9.1 of the <a href="#bib-smpte-standards-operation-manual-v31"></a>, in force as of January 31, 2015, is reproduced in <a href="#sec-standards-om-intellectual-property-policy"></a>.</p>
 
   </section>
-  
-  <section id="sec-canonical-uri">
-    <h3>Canonical URI</h3>
+
+  <section class="annex" id="sec-standards-om-intellectual-property-policy">
+    <h2>Standards OM Intellectual Property Policy</h2>
+    <p>(copied in its entirety from the <a href="#bib-smpte-standards-operation-manual-v31"></a>, in force as of January 31, 2015)</p>
     
-    <section id="sec-id-keyword">
-      <h4><code>$id</code> Keyword</h4>
-      
-      <p>A SMPTE JSON Schema resource shall use the <code>$id</code> keyword in the root schema
-      object, thereby providing the canonical URI for the JSON root schema.</p>
-    </section>
-    
-    <section id="sec-canonical-uri-syntax">
-      <h4>Canonical URI Syntax</h4>
-      
-      The canonical URI shall conform to the <code>SCHEMAID</code> syntax below,
-      specified using <a href="#bib-ietf-rfc-5234"></a> and <a
-      href="#bib-ietf-rfc-7405"></a> and conforming to <a
-      href="#bib-ietf-rfc-3986"></a>.
-      
 <pre>
-SCHEMAID = %s"https://www.smpte-ra.org/json-schema/" PUBNUM "/" REVISION [ "/" SHORTNAME]
-SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
-PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
-REVISION = STABLEREV
-STABLEREV = 4(DIGIT) [2(DIGIT)]
+9. Intellectual Property & Confidentiality Policy
+
+9.1. Patent Policy
+
+Engineering Documents may include technology that is subject to Essential Claims (see
+section 9.1.2) but only if all known patent holders are prepared to agree to terms that are
+“Reasonable and Non-Discriminatory” (RAND) for all Essential Claims. All Engineering
+Committees and Groups, as described in section 3, are entitled to give preference to
+technologies that are believed to be free of Essential Claims or for which a free-of-charge
+license will be available, provided any such solution is believed to be technically adequate. A
+Committee shall not discuss or otherwise consider specific licensing terms for such
+technologies.
+
+It is important that, whenever possible, Committees are able to make a choice of technology
+based on all relevant information, including the existence, or potential existence, of any
+Essential Claims that may encumber a technology under consideration.
+
+This Policy imposes an obligation on all Committee Participant Members and Observer
+Members (Members) and Guests, in accordance with section 9.1.4, to notify the Technology
+Committee Chair, as early as possible in the development process if they are aware, based
+on their actual personal knowledge, of patents or patent applications, anywhere in the world,
+that might contain Essential Claims to a technology being proposed for inclusion in an
+Engineering Document.
+
+9.1.1. Notice to Meetings
+
+At the start of each meeting the Chair shall read a statement in a form approved by the
+Standards Committee reminding Members and Guests of the obligations imposed by this
+Policy.
+
+9.1.2. Essential Claims
+
+An Essential Claim is “essential” to an Engineering Document only if it is necessarily infringed
+by implementing the Normative Text of that Engineering Document and is “necessarily
+infringed” only when there is no commercially-reasonable non-infringing alternative for
+implementing the Engineering Document. Essential Claims to an Engineering Document
+exclude those essential to enabling technologies, which are those technologies that may be
+necessary to make or use any implementations but are not expressly set forth in the
+Engineering Document. Essential Claims to an Engineering Document also exclude claims
+essential to any Normative Reference included in the Engineering Document.
+
+9.1.3. Patent Statement to Accompany Engineering Document Submission from
+External Organizations
+
+A completed SMPTE Patent Statement is required when a draft new Engineering Document
+is submitted to SMPTE on behalf of a company or other outside organization. The Patent
+Statement shall be made by the company or organization using the form approved by the
+Standards Committee and shall include the information required on that form.
+
+A Technology Committee may agree by Administrative Vote to consider a draft document, or
+contribution to a draft document, without a Patent Statement, provided assurance is received
+from the submitter that the Patent Statement will be provided within 45 days. If no Patent
+Statement is received within 45 days of the submission, the Technology Committee Chair
+shall inform the Standards Vice President, who may suspend work on the submission. 
+
+A Member or Guest making any contribution to the Normative Text of a proposed Engineering
+Document shall provide any declaration required under Section 9.1.4.
+
+9.1.4. Declaration of Knowledge of Relevant Intellectual Property
+
+This Policy imposes an obligation on all Members and Guests to notify the Technology
+Committee Chair, as early as possible in the development process, if they are aware, based
+on their actual personal knowledge, of patents or patent applications that might contain
+Essential Claims to a technology being proposed for inclusion in an Engineering Document.
+
+The requirement to notify the Technology Committee Chair of actual personal knowledge of
+actual or potential Essential Claims is an ongoing obligation that begins with becoming a
+Participant Member or Observer Member of a Technology Committee, or attending a meeting
+as a Guest, and continues through any form of participation in the work or proceedings of the
+Technology Committee, including any form of participation by electronic means such as
+receipt of emails. Any required notice shall be given as soon as practically possible and in all
+cases shall be given within 45 days after the knowledge is obtained and in advance of any
+vote on the Engineering Document. The notice shall be either in the form of a verbal
+statement at a meeting, which shall be recorded in the minutes of the meeting, or in written
+form to the Chair of the responsible Technology Committee. The notice shall include all
+relevant information available to the Member or Guest, such as patent or application
+number(s) and owner of the intellectual property, and shall identify the part(s) of the
+Engineering Document believed to be subject to Essential Claims.
+
+The receipt of such a notice shall create a Technology Committee action item for the Director
+of Engineering, who shall follow the procedures of section 9.1.5 to solicit a Patent Statement
+from the reported owner of the intellectual property.
+
+This Policy does not require any patent search and specifically recognizes that sponsorship
+of a Member or Guest does not create any obligation to perform a patent search.
+
+This Policy recognizes that all Members and Guests act as individuals and that obligations
+imposed by this Operations Manual apply to the Member or Guest rather than to any
+sponsoring organization. For this reason, the obligation to disclose is created by the actual
+personal knowledge of the Member or Guest and applies to any potential Essential Claims
+known to the Member or Guest, whether or not the patent or patent application is owned by a
+sponsor. Nothing in this Policy shall impute knowledge of a Member or Guest by reason of
+employment, sponsorship, or any other association or connection with a patent applicant or
+holder.
+
+This Policy does not require a Member or Guest to form a legal opinion as to the applicability
+or enforceability of Essential Claims, but does require a disclosure if the Member or Guest
+has actual personal knowledge of a patent or patent application that, in the good faith
+judgment of the Member or Guest, is likely to include Essential Claims to implementation of
+the proposed Engineering Document.
+
+It is recognized that, on occasion, this obligation may conflict with terms of employment or
+contractual agreements. Members and Guests shall use reasonable efforts to obtain
+clearance to declare any relevant Essential Claims. No Member may support the adoption of
+an Engineering Document or technology while knowing or believing that undeclared Essential
+Claims exist. A Member or Guest who cannot obtain clearance to reveal an Essential Claim
+shall notify the Technology Committee Chair that s/he will cease to participate in discussion
+of, and withdraw from all Ballots concerning, the proposed document.
+
+9.1.5. Inquiry to Possible Patent Holders
+
+Following notice of possible Essential Claims, the Director of Engineering shall perform a
+Patent Inquiry, requesting the reported owner of the intellectual property in question to
+complete a SMPTE Patent Statement if the owner considers that it does own or control
+patents or pending applications likely to include Essential Claims for implementation or use of
+the Engineering Document. The Patent Statement, in a form approved by the Standards
+Committee, shall identify whether licensing of any Essential Claims would be available under
+RAND terms.
+
+If no reply is received within 30 days, the Director of Engineering shall repeat the Patent
+Inquiry. If no reply is received within a further 30 days, the Director of Engineering shall
+report this to the Technology Committee and no further correspondence with the entity shall
+be required.
+
+9.1.6. Conduct of Ballots, Votes and Audits with Associated IP Statements
+
+When an Engineering Document is Balloted for elevation to FCD, the Director of Engineering
+shall issue, in conjunction with the Ballot notification, a “Call for Patents” in a form approved
+by the Standards Committee. The FCD Ballot shall reference any Patent Statements already
+submitted with respect to the proposed Engineering Document. If a notice of possible
+Essential Claims has been made as described in section 9.1.4, and if the Director of
+Engineering has not received an affirmative response to the Patent Inquiry described in
+section 9.1.5, then the Director of Engineering shall post a Comment against the FCD Ballot
+regarding the outstanding Patent Inquiry.
+
+Receipt of a statement in response to a Patent Inquiry shall be noted as a Comment
+response and shall resolve the Comment unless the Patent Statement indicates that
+Essential Claims exist and that there is no RAND assurance. If any entity provides a
+completed Patent Statement that indicates Essential Claims exist and that there is no RAND
+assurance, the Technology Committee may either revise the Engineering Document to
+exclude the protected technology or terminate work on the Engineering Document. If the
+Technology Committee considers that the completed Patent Statement may be frivolous or
+invalid it may choose to seek the direction of the Standards Committee. If any entity has
+failed to respond to a Patent Inquiry and there is no suitable alternative technology, these
+facts shall be noted as a Comment response, and the Technology Committee may choose to
+retain the technology in question by conducting a Disposition Vote on the Comment.
+
+All relevant Patent Statements, Patent Inquiries, and Disposition Votes shall be part of the
+Standards Committee Audit.
+
+9.1.7. Patent Statement in Published Documents
+
+All published Engineering Documents shall include an appropriate statement, in a form
+approved by the Standards Committee; calling attention to the possibility that implementation
+of the Engineering Document may require the use of Essential Claims.
+
+9.1.8. Transfers of Essential Claims
+
+(a) Each party submitting a Patent Statement shall agree that it will not transfer, and confirm
+that it has not transferred, ownership in patents or patent applications having Essential
+Claims for the purpose of circumventing such party’s obligations under this Policy.
+
+(b) Licensing undertakings made pursuant to this Policy shall be interpreted as
+encumbrances that bind all successors-in-interest. Recognizing that this interpretation may
+not be enforceable in all legal jurisdictions, any party who has submitted a licensing
+undertaking according to this Policy who transfers ownership of any patent or patent
+application having Essential Claims subject to such undertaking shall include appropriate
+provisions in the relevant transfer documents to ensure that the undertaking is binding on the
+transferee and that the transferee will similarly include appropriate provisions in the event of
+future transfers with the goal of binding all successors-in-interest. The undertaking shall be
+interpreted as binding on successors-in-interest regardless of whether such provisions are
+included in the relevant transfer documents.
+
+9.1.9. Essential Claims Revealed After Publication
+
+In the event that an Essential Claim is first revealed by a Member or Guest following adoption
+and publication of a Engineering Document, the owner or controller of the Essential Claim
+shall be asked to make a licensing commitment to the Essential Claim in the same manner as
+if it related to technology proposed for adoption by such Member or Guest during the
+development of the Engineering Document in question. If such request is refused, the
+Engineering Document in question shall be referred back to the relevant Technology
+Committee for consideration and possible action.
+
+9.1.10. Irrevocability and Binding Nature of Commitments
+
+All commitments made under this Policy shall be irrevocable, except that the owner of an
+Essential Claim may include a “reciprocity” or “defensive suspension” term in a license to its
+Essential Claims. For purposes of this policy, (a) reciprocity shall mean that a licensor may
+require a licensee to provide a reciprocal RAND license with respect to any Essential
+Claim(s) owned by the licensee with respect to the same Engineering Document, and (b)
+defensive suspension shall mean that a licensor may revoke a license granted to an
+implementer if that implementer asserts an Essential Claim (other than under RAND license
+terms) in connection with the same Engineering Document against the licensor or its
+Affiliates.
+
+An Affiliate of a party shall mean a company or other legal entity which now or, hereafter,
+controls or is controlled by or is under common control with such party, but any such
+company or other legal entity shall be deemed to be an Affiliate only as long as such control
+exists, and for the purposes of this definition, “control” shall mean direct or indirect ownership
+of more than 50% of the voting power, capital or other securities of the controlled or
+commonly controlled entity.
+
+9.1.11. Third Party Beneficiaries
+
+In the event that any party brings an infringement action against an implementer of an
+Engineering Document relating to an Essential Claim(s) under such document with respect to
+which such Essential Claim owner is under a licensing obligation under this Policy, SMPTE
+shall have no obligation to intervene, but such implementer shall be entitled to assert that it is
+a third party beneficiary under such licensing obligation.
+
+9.1.12. Survival of Obligations
+
+(a) Any disclosure or other obligation that any Member or Guest incurs under this Policy shall
+continue in force after the Member ceases to be a Member, or the Guest ceases to be a
+participant, for any reason. However, no Member or Guest shall become subject to any new
+obligation under this Policy after ceasing to be a Member or Guest.
+
+(b) Any licensing obligation incurred by any party under this policy shall continue in force until
+the expiration of all Patents that include Essential Claims and shall be binding upon
+successors of ownership and control as specified in 9.1.8.
+
+(c) All persons and entities that are intended third party beneficiaries of rights and obligations
+incurred under this Policy shall remain entitled to enforce the same, notwithstanding any
+termination, dissolution or winding up of SMPTE.
 </pre>
-      
-      <p><code>PUBNUM</code> shall represent the official publication number of the
-      Engineering Document, without leading zeroes and including a part number, if
-      any, separated by a hyphen, e.g., 456-1.</p>
-      
-      <p class="note">The <code>REVISION</code> component of a stable SMPTE JSON
-      Schema canonical URI does not necessarily correspond to the publication
-      date of its defining Engineering Document. For instance, the defining
-      Engineering Document can be revised in such a way that the contents of the
-      JSON Schema remain unchanged.</p>
-      
-      <p class="note">
-        No changes to SMPTE JSON Schema canonical URI are necessary following a Draft
-        Publication ballot since SMPTE JSON Schema canonical URI are constructed
-        independently of the publication date of the Engineering Document.
-      </p>
-    </section>
-    
-    <section id="sec-examples">
-      <h4>Examples (informative)</h4>
-      The following is an example SMPTE JSON Schema resource canonical URI:
-      
-      <pre>https://www.smpte-ra.org/json-schema/456/2021/foo</pre>
-      
-      <p><a href="#table-examples"></a> lists examples.</p>
-
-      <table id="table-examples">
-        <caption>Examples</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>URI</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hello</td>
-            <td>https://www.smpte-ra.org/json-schema/456/2021/foo</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    
-    <section id="sec-registration">
-      <h4>Registration (informative)</h4>
-      
-      <p>
-        The SMPTE JSON Schema resource canonical URI syntax ensures uniqueness across
-        Engineering Documents, and thus no specific registration steps are required.
-      </p>
-
-      <p><a href="#figure-process-flowchart"></a> shows an example of the process.</p>
-
-      <figure id="figure-process-flowchart">
-        <figcaption>Example of the Process</figcaption>
-        <img class="figure" src="figure-process-flowchart.png">
-      </figure>
-      
-    </section>
-  </section>
-  
-  <section id="sec-using-a-smpte-json-schema-resource">
-    <h3>Using a SMPTE JSON Schema Resource</h3>
-    
-    <p>A SMPTE JSON Schema resource can be used informatively by an Engineering
-    Document, either by inclusion or by reference.</p>
-    
-    <p class="note">The current specification of JSON Schema, though well-supported, is not a
-    normatively referenceable document per the Standards Operations Manual (section
-    10 Normative References) and AG-03. Thus, provision of SMPTE JSON Schema
-    resources, at this time, is strictly informative.</p>
-  </section>
-    
-  <section id="sec-version">
-    <h3>Version</h3>
-    
-    <p>
-      Whenever a SMPTE JSON Schema resource is provided, the Engineering Document
-      shall provide an informative reference to the JSON Schema language specification
-      to which it conforms (e.g., JSON Schema, as shown in the Bibliography).
-    </p>
-    
-    <p>
-      A SMPTE JSON Schema resource shall use the <code>$schema</code> keyword in the root schema
-      object.
-    </p>
-    
-    <p class="note">
-      the <code>$schema</code> keyword is both used as JSON Schema dialect identifier and
-      as the identifier of a resource which is itself a JSON Schema resource to
-      evaluate conformance to that dialect.
-    </p>
-    
-    <p class="note">
-      JSON Schema resources can comprise subschemas, where portions of a root
-      schema document are separately identifiable by a URI-reference that are not
-      absolute and/or contain non-empty fragments.  For example,
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items/definitions/rationalType</code>
-      is a reference to a subschema within the SMPTE JSON Schema resource
-      <code>https://smpte-ra.org/schemas/2120-2/2021/smpte-tlx-items</code>
-      where the subschema represents the constraints for a JSON structure
-      representing a rational value.
-    </p>
     
   </section>
-  
-  <section id="sec-keyword-order">
-    <h3>Keyword Order</h3>
+
+   <section class="annex" id="sec-patent-statement-declaration-with-respect-to-smpte-engineering-documents">
+    <h2>Patent Statement Declaration With Respect to SMPTE Engineering Documents</h2>
+    <p>Form available at: <a>https://github.com/SMPTE/ag-08/PatentDeclaration-v1-2014-10-30.pdf</a></p>
     
-    <p>The following keywords should appear as the first keywords in any SMPTE JSON Schema resource in this order:</p>
-    
-    <ul>
-      <li><code>$schema,</code> as specified in <a href="#sec-version"></a></li>
-      <li><code>$id,</code> as specified in <a href="#sec-id-keyword"></a>; and,</li>
-      <li><code>$comment,</code> as specified in <a
-      href="#sec-cc-license-schema-resources"></a>.</li>
-    </ul>
-
   </section>
-</section>
-
-<section id="sec-copyright-and-license">
-  <h2>Copyright and License</h2>
-  
-  <section id="sec-license">
-    <h3>License</h3>
-    
-    <p>
-      Any SMPTE JSON structure or SMPTE JSON Schema resource, whether provided within
-      the prose or as an Additional Element of an Engineering Document, shall be
-      licensed according to <a href="#sec-json-doc-license"></a>.
-    </p>
-    
-    <p class="note">
-      The license portion of Annex A is verbatim the BSD-3-Clause license
-      available at <a>https://spdx.org/licenses/BSD-3-Clause.html</a>.
-    </p>
-  </section>
-  
-  <section id="sec-cc-license-schema-resources">
-    <h3>Copyright and License in SMPTE JSON Schema resources</h3>
-    
-    Any SMPTE JSON Schema resource shall include the copyright and license
-    provided in <a href="#sec-json-doc-license"></a> in the form of the
-    <code>$comment</code> element specified in <a href="#sec-cc-license-element"></a>.
-  </section>
-</section>
-
-<section class="annex" id="sec-json-document-license">
-  <h2>JSON Document License</h2>
-
-  <section id="sec-copyright-element">
-    <h3>Copyright Element</h3>
-<pre>
-Copyright (c), Society of Motion Pictures and Television Engineers. 
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met: 
-</pre>
-<p><a href="#table-copyright-forms"></a> lists copyright forms.</p>
-<table id="table-copyright-forms">
-  <caption>Copyright Forms</caption>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>(c)</td>
-    </tr>
-    <tr>
-      <td>©</td>
-    </tr>
-  </tbody>
-</table>
-  </section>
-
-  <section id="sec-license-element">
-    <h3>License Element</h3>
-
-  <p>The following example JSON Schema incorporates the above element in
-  accordance with <a href="#sec-cc-license-schema-resources"></a>, with the initial
-  keyword order recommended in <a href="#sec-keyword-order"></a>.</p>
-
-<pre>
-{
-  "$schema": "https://json-schema.org/draft/2020-12/meta/core",
-  "$id": "https://smpte-ra.org/json-schema/2199-1/2022/foo",
-  "$comment": "Copyright (c), Society of Motion Pictures and Television Engineers. Licensed under BSD-3-Clause (https://spdx.org/licenses/BSD-3-Clause.html).",
-  "title": "foo",
-  "type": "object",
-  "description": "This is an example schema for a fictitious foo object.",
-  "examples": [
-    {
-      "bar": "zyzx"
-    }
-}  
-</pre>
-
-  </section>
-</section>
-
-<section id="sec-bibliographic-references">
-  <ul>
-    <li><cite id="bib-draft-bhutton-json-schema-00">IETF
-    draft-bhutton-json-schema-00</cite>, Wright, A., H. Andrews; B. Hutton, G.
-    Dennis, "JSON Schema: A Media Type for Describing JSON Documents", Work in
-    Progress, December 8, 2020.
-    <a>https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00</a>
-    </li>
-  </ul>
-</section>
 
 </body>
 
